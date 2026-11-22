@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Paradise 🎀</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="background-hearts" id="backgroundHearts"></div>
+
+<header class="navbar">
+    <div class="logo">୨୧ Pink Paradise</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#games">Mini games</a>
+        <a href="#rewards">Rewards</a>
+    </nav>
+    <div class="user-info">
+        <span>💗 <span id="coins">0</span></span>
+        <span>⭐ Level <span id="level">1</span></span>
+    </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="eyebrow">✧ YOUR LITTLE DREAM WORLD ✧</span>
+        <h1>Welcome to<br><i>Pink Paradise</i></h1>
+        <p>A little place for big dreams, sweet games and pretty things.</p>
+        <a href="#games" class="main-button">Explore the world ♡</a>
+        <div class="hero-stats">
+            <div><strong id="heroCoins">0</strong><small>Pink coins</small></div>
+            <div><strong id="heroGames">0</strong><small>Games played</small></div>
+            <div><strong id="heroLevel">1</strong><small>Your level</small></div>
+        </div>
+    </div>
+    <div class="hero-art">
+        <div class="big-circle">
+            <div class="floating-bow">🎀</div>
+            <div class="floating-star star-one">✦</div>
+            <div class="floating-star star-two">♡</div>
+            <div class="hero-flower">🌷</div>
+            <div class="hero-label">made of<br>sweet dreams</div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="games">
+    <div class="section-heading">
+        <span>♡ CHOOSE YOUR ADVENTURE ♡</span>
+        <h2>Little Games Corner</h2>
+        <p>Pick something cute to play today!</p>
+    </div>
+
+    <div class="games-grid">
+
+        <div class="game-card pink-card">
+            <div class="game-icon">💌</div>
+            <span class="game-tag">LOVE & FUN</span>
+            <h3>Love Tester</h3>
+            <p>Discover your compatibility with someone!</p>
+            <button onclick="openGame('love')">Play now →</button>
+        </div>
+
+        <div class="game-card purple-card">
+            <div class="game-icon">👗</div>
+            <span class="game-tag">FASHION</span>
+            <h3>Dress Up</h3>
+            <p>Create your own adorable outfits.</p>
+            <button onclick="openGame('dress')">Play now →</button>
+        </div>
+
+        <div class="game-card yellow-card">
+            <div class="game-icon">🧁</div>
+            <span class="game-tag">BRAIN GAME</span>
+            <h3>Sweet Memory</h3>
+            <p>Find matching pairs of cute cards.</p>
+            <button onclick="openGame('memory')">Play now →</button>
+        </div>
+
+        <div class="game-card blue-card">
+            <div class="game-icon">💗</div>
+            <span class="game-tag">ARCADE</span>
+            <h3>Catch My Hearts</h3>
+            <p>Catch as many hearts as you can!</p>
+            <button onclick="openGame('catch')">Play now →</button>
+        </div>
+
+        <div class="game-card green-card">
+            <div class="game-icon">🌷</div>
+            <span class="game-tag">SELF CARE</span>
+            <h3>Make a Wish</h3>
+            <p>Write down your sweetest wishes.</p>
+            <button onclick="openGame('wish')">Play now →</button>
+        </div>
+
+        <div class="game-card peach-card">
+            <div class="game-icon">🪞</div>
+            <span class="game-tag">CREATIVITY</span>
+            <h3>Beauty Room</h3>
+            <p>Choose your favourite aesthetic.</p>
+            <button onclick="openGame('beauty')">Play now →</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="daily-section" id="rewards">
+    <div>
+        <span class="eyebrow">✧ YOUR LITTLE ROUTINE ✧</span>
+        <h2>Daily Sweet Tasks</h2>
+        <p>Complete activities and collect pink coins!</p>
+    </div>
+    <div class="tasks">
+        <label><input type="checkbox" onchange="completeTask(this, 15)"> Play one mini game <span>+15 💗</span></label>
+        <label><input type="checkbox" onchange="completeTask(this, 10)"> Make a wish <span>+10 💗</span></label>
+        <label><input type="checkbox" onchange="completeTask(this, 20)"> Complete a memory game <span>+20 💗</span></label>
+        <label><input type="checkbox" onchange="completeTask(this, 10)"> Visit your Beauty Room <span>+10 💗</span></label>
+    </div>
+</section>
+
+<section class="achievement-section">
+    <div class="section-heading">
+        <span>✧ LITTLE VICTORIES ✧</span>
+        <h2>Your Achievements</h2>
+    </div>
+    <div class="achievement-grid">
+        <div class="achievement" id="achFirst">🌸<p>First Steps</p><small>Play your first game</small></div>
+        <div class="achievement" id="achCoins">💎<p>Coin Collector</p><small>Collect 100 coins</small></div>
+        <div class="achievement" id="achGames">🎀<p>Game Lover</p><small>Play 5 games</small></div>
+        <div class="achievement" id="achWish">🌙<p>Dreamer</p><small>Make a wish</small></div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-logo">୨୧ Pink Paradise</div>
+    <p>A little world full of lovely things ♡</p>
+    <span>Made with love and glitter ✧</span>
+</footer>
+
+</main>
+
+<div class="modal" id="gameModal">
+    <div class="modal-box">
+        <button class="close-button" onclick="closeGame()">×</button>
+        <div id="gameContent"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
